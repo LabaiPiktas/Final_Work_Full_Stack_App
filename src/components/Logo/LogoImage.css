@@ -1,0 +1,8 @@
+.logo {
+  height: 80px;
+  width: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 0;
+  margin: 0;
+}/*# sourceMappingURL=LogoImage.css.map */

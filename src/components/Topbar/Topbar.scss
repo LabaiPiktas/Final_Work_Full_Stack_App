@@ -1,0 +1,26 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: black;
+  color: white;
+  height: 100px;
+
+  a {
+    color: inherit;
+
+    &.user-container {
+      color: inherit;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+  }
+
+  &-items {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+}

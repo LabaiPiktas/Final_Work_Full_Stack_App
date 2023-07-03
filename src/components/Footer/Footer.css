@@ -1,0 +1,14 @@
+.footer {
+  gap: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  background-color: black;
+  color: white;
+  height: 40px;
+  width: 100%;
+}
+.footer a {
+  color: inherit;
+}/*# sourceMappingURL=Footer.css.map */

@@ -1,0 +1,12 @@
+
+    {
+        "users": [
+          {
+            "name": "Rokelis",
+            "surname": "Andreikenas",
+            "date": "2000-11-11",
+            "email": "rokas@gmail.com",
+            "password": "rokas",
+            "id": 1
+          }]
+}

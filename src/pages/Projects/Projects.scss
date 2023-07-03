@@ -1,0 +1,43 @@
+$shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+  rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 30px; 
+  
+    .single-project {
+      width: 24%;
+    }
+  }
+
+.project-card {
+  width: 400px;
+  height: 400px;
+  box-shadow: $shadow;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.3rem;
+
+  .image-container {
+    height: 75%;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+  }
+
+  .title {
+    margin: 0;
+    padding: 1rem;
+    height: 25%;
+    font-size: 1.1rem;
+  }
+}
+
+.button-container {
+  padding-bottom: 1rem;
+}
