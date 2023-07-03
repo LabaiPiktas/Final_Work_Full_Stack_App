@@ -15,7 +15,7 @@ export const checkUserCredentials = (users, checkingUser) => {
 // Add a new user
 export const addUser = async (userData) => {
   try {
-    const response = await axios.post("http://localhost:3000/users", userData);
+    const response = await axios.post("/db.json", userData);
     return response.data;
   } catch (error) {
     console.error("Error adding user:", error);
