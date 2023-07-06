@@ -23,14 +23,14 @@ const UserProvider = ({ children }) => {
 
   const handleLogin = (user, setError) => {
     axios
-      .get("http://localhost:3000/Users")
-      .then((resp) => resp.data)
+      .post("http://localhost:3000/login", user) // Update the URL to the correct server URL
       .then((response) => {
-        const existingUser = checkUserCredentials(response, user);
-        if (existingUser) {
-          setUser(existingUser);
-          localStorage.setItem("user", JSON.stringify(existingUser));
+        if (response.data.message) {
+          // Login successful
+          setUser(response.data.user);
+          localStorage.setItem("user", JSON.stringify(response.data.user));
         } else {
+          // Login failed
           setError("User email or password is incorrect.");
         }
       })
@@ -46,8 +46,9 @@ const UserProvider = ({ children }) => {
   };
 
   const handleRegister = (newUser) => {
+    console.log("Registering user:", newUser); // Add this console.log statement
     axios
-      .post("http://localhost:3000/Users", newUser)
+      .post("http://localhost:3000/users", newUser)
       .then(() => {
         navigate(LOGIN_ROUTE);
       })
@@ -58,7 +59,7 @@ const UserProvider = ({ children }) => {
 
   const handleUpdateUser = (updatingUser) => {
     axios
-      .put(`http://localhost:3000/Users/${user.id}`, updatingUser)
+      .put(`http://localhost:3000/users/${user.id}`, updatingUser)
       .then((resp) => resp.data)
       .then((response) => {
         setUser(response);
